@@ -1,0 +1,15 @@
+# Zola build output
+public/
+
+# Local development
+.DS_Store
+Thumbs.db
+
+# IDE / editors
+.vscode/
+.idea/
+
+# OS / editor temporary files
+*.swp
+*.swo
+*~
