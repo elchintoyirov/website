@@ -4,7 +4,8 @@ set -euo pipefail
 ROOT="${DEPLOY_ROOT:-$HOME/elchintoyirov.uz}"
 REPO="${DEPLOY_REPO:-$HOME/codebase/website}"
 SITE="$ROOT/site"
-BUILD="$ROOT/.build"
+BUILD_PARENT="${DEPLOY_BUILD_DIR:-$HOME/.cache/website-build}"
+BUILD="$BUILD_PARENT/site"
 BRANCH="main"
 ZOLA_IMAGE="ghcr.io/getzola/zola:v0.22.1"
 
@@ -21,14 +22,14 @@ git submodule sync --quiet --recursive
 git submodule update --init --recursive --quiet
 
 rm -rf "$BUILD"
-mkdir -p "$BUILD"
+mkdir -p "$BUILD_PARENT"
 
 docker run --rm \
     --user "$(id -u):$(id -g)" \
     --volume "$REPO:/project" \
-    --volume "$BUILD:/output" \
+    --volume "$BUILD_PARENT:/out" \
     --workdir /project \
-    "$ZOLA_IMAGE" build --output-dir /output --force
+    "$ZOLA_IMAGE" build --output-dir /out/site
 
 test -f "$BUILD/index.html"
 
