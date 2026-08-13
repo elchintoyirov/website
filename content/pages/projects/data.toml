@@ -1,0 +1,15 @@
+[[project]]
+name = "Go by Example — Uzbek translation"
+desc = "A complete Uzbek translation of Go by Example, covering the full set of ~96 annotated examples. The upstream project now links to it from its own README, so Uzbek-speaking developers can find it from the canonical site."
+tags = ["go", "translation", "open-source", "documentation"]
+links = [
+  { name = "read it", url = "https://elchintoyirov.github.io/gobyexample/" },
+  { name = "merged PR", url = "https://github.com/mmcgrana/gobyexample/pull/663" },
+  { name = "source", url = "https://github.com/elchintoyirov/gobyexample/tree/uzbek-translation" },
+]
+
+[[project]]
+name = "news-api"
+desc = "A news publishing API in FastAPI and PostgreSQL: posts with categories, tags, media and comments, session-based authentication, and an admin interface. SQLAlchemy models with Alembic migrations, packaged with Docker and a Nix flake."
+tags = ["python", "fastapi", "postgresql", "sqlalchemy", "docker"]
+links = [{ name = "github", url = "https://github.com/elchintoyirov/news-api" }]
