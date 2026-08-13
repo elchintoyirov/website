@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="/srv/elchintoyirov.uz"
-REPO="$ROOT/repo"
+ROOT="${DEPLOY_ROOT:-$HOME/elchintoyirov.uz}"
+REPO="${DEPLOY_REPO:-$HOME/codebase/website}"
 SITE="$ROOT/site"
 BUILD="$ROOT/.build"
 BRANCH="main"
