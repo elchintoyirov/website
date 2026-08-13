@@ -1,9 +1,12 @@
 # Zola build output
 public/
+static/giallo-light.css
+static/giallo-dark.css
 
 # Local development
 .DS_Store
 Thumbs.db
+deploy/.env
 
 # IDE / editors
 .vscode/
